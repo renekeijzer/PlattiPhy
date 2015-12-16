@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{ac8d0df7-0ae5-4535-b3ff-6d6942893a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Systems">
+      <UniqueIdentifier>{59de567c-8ef7-4fbd-913b-d28021cc5f6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Systems">
+      <UniqueIdentifier>{25520eba-c401-4f11-be36-7bf56b8bdbeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\theGrid">
+      <UniqueIdentifier>{2506b2a9-1a0f-4e8e-a6a3-e409165e6891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\theGrid">
+      <UniqueIdentifier>{5fd570f3-72a0-43df-a194-2ac16f215d51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{9ec5e299-bcf5-4042-b65e-2e04e2c9c68b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem.cpp">
+      <Filter>Source Files\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TheGrid\Analytics.cpp">
+      <Filter>Source Files\theGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TheGrid\BaseComponent.cpp">
+      <Filter>Source Files\theGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TheGrid\BasePool.cpp">
+      <Filter>Source Files\theGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TheGrid\BaseEvent.cpp">
+      <Filter>Source Files\theGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TheGrid\BaseSystem.cpp">
+      <Filter>Source Files\theGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TheGrid\Entity.cpp">
+      <Filter>Source Files\theGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TheGrid\EntityManager.cpp">
+      <Filter>Source Files\theGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TheGrid\EventManager.cpp">
+      <Filter>Source Files\theGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TheGrid\SystemManager.cpp">
+      <Filter>Source Files\theGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementSystem.cpp">
+      <Filter>Source Files\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Controlable.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Components.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderable.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Colidable.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Controlable.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem.h">
+      <Filter>Header Files\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Moveable.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems.h">
+      <Filter>Header Files\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\Analytics.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\AnalyticsException.h">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\BaseComponent.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\BaseEvent.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\BasePool.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\BaseReceiver.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\BaseSystem.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\Component.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\ComponentHandle.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\Entity.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFactory.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\EntityId.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\EntityManager.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\Event.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\EventManager.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="GameHandler.h">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\NonCopyable.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\Pool.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\Receiver.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\SimpleSignal.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\System.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TheGrid\SystemManager.hpp">
+      <Filter>Header Files\theGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementSystem.h">
+      <Filter>Header Files\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysComp.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

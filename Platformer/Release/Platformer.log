@@ -1,0 +1,108 @@
+﻿Build started 11/29/2015 5:52:30 PM.
+     1>Project "D:\Users\rene-keijzer\Documents\GitHub\Platformer\Platformer\Platformer.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Controlable.cpp EntityFactory.cpp GameHandler.cpp MovementSystem.cpp RenderSystem.cpp main.cpp
+         Controlable.cpp
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C2146: syntax error : missing ';' before identifier 'getNextDirection'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(19): warning C4183: 'getNextDirection': missing return type; assumed to be a member function returning 'int'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2061: syntax error : identifier 'direction'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(16): error C2039: 'heading' : is not a member of 'Controlable::keyPair'
+                 d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(21) : see declaration of 'Controlable::keyPair'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2653: 'direction' : is not a class or namespace name
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2065: 'None' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2065: 'inc' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2614: 'Controlable::keyPair' : illegal member initialization: 'heading' is not a base or member
+     1>Controlable.cpp(8): error C2143: syntax error : missing '}' before ';'
+     1>Controlable.cpp(8): error C2440: 'initializing' : cannot convert from 'initializer-list' to 'const Controlable::keyPair'
+                 No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>Controlable.cpp(8): error C2073: 'keys' : elements of partially initialized array must have a default constructor
+     1>Controlable.cpp(8): error C2512: 'Controlable::keyPair' : no appropriate default constructor available
+         EntityFactory.cpp
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C2146: syntax error : missing ';' before identifier 'getNextDirection'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(19): warning C4183: 'getNextDirection': missing return type; assumed to be a member function returning 'int'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2061: syntax error : identifier 'direction'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(16): error C2039: 'heading' : is not a member of 'Controlable::keyPair'
+                 d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(21) : see declaration of 'Controlable::keyPair'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2653: 'direction' : is not a class or namespace name
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2065: 'None' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2065: 'inc' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2614: 'Controlable::keyPair' : illegal member initialization: 'heading' is not a base or member
+         GameHandler.cpp
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C2146: syntax error : missing ';' before identifier 'getNextDirection'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(19): warning C4183: 'getNextDirection': missing return type; assumed to be a member function returning 'int'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2061: syntax error : identifier 'direction'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(16): error C2039: 'heading' : is not a member of 'Controlable::keyPair'
+                 d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(21) : see declaration of 'Controlable::keyPair'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2653: 'direction' : is not a class or namespace name
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2065: 'None' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2065: 'inc' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2614: 'Controlable::keyPair' : illegal member initialization: 'heading' is not a base or member
+         MovementSystem.cpp
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C2146: syntax error : missing ';' before identifier 'getNextDirection'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(19): warning C4183: 'getNextDirection': missing return type; assumed to be a member function returning 'int'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2061: syntax error : identifier 'direction'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(16): error C2039: 'heading' : is not a member of 'Controlable::keyPair'
+                 d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(21) : see declaration of 'Controlable::keyPair'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2653: 'direction' : is not a class or namespace name
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2065: 'None' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2065: 'inc' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2614: 'Controlable::keyPair' : illegal member initialization: 'heading' is not a base or member
+     1>MovementSystem.cpp(9): error C2039: 'Control' : is not a member of 'Controlable'
+                 d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(9) : see declaration of 'Controlable'
+     1>MovementSystem.cpp(17): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>MovementSystem.cpp(18): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         RenderSystem.cpp
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C2146: syntax error : missing ';' before identifier 'getNextDirection'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(19): warning C4183: 'getNextDirection': missing return type; assumed to be a member function returning 'int'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2061: syntax error : identifier 'direction'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(16): error C2039: 'heading' : is not a member of 'Controlable::keyPair'
+                 d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(21) : see declaration of 'Controlable::keyPair'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2653: 'direction' : is not a class or namespace name
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2065: 'None' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2065: 'inc' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2614: 'Controlable::keyPair' : illegal member initialization: 'heading' is not a base or member
+         main.cpp
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C2146: syntax error : missing ';' before identifier 'getNextDirection'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(19): warning C4183: 'getNextDirection': missing return type; assumed to be a member function returning 'int'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2061: syntax error : identifier 'direction'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C2146: syntax error : missing ';' before identifier 'heading'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(16): error C2039: 'heading' : is not a member of 'Controlable::keyPair'
+                 d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(21) : see declaration of 'Controlable::keyPair'
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2653: 'direction' : is not a class or namespace name
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(18): error C2065: 'None' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2065: 'inc' : undeclared identifier
+     1>d:\users\rene-keijzer\documents\github\platformer\platformer\Controlable.h(23): error C2614: 'Controlable::keyPair' : illegal member initialization: 'heading' is not a base or member
+     1>Done Building Project "D:\Users\rene-keijzer\Documents\GitHub\Platformer\Platformer\Platformer.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.55

@@ -1,5 +1,6 @@
 #ifndef __FORCES__
 #define __FORCES__
+/*
 namespace Physics{
 	class DragCoefficient{
 		float f;
@@ -28,5 +29,5 @@ namespace Physics{
 
 };
 
-
+*/
 #endif

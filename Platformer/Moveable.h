@@ -17,7 +17,7 @@ public:
 	void move(){
 		compPosition += compVelocity;
 	}
-
+	
 
 private:
 	sf::Vector2f compVelocity;

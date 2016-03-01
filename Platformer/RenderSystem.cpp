@@ -8,8 +8,8 @@ void RenderSystem::update(EntityManager & entities, EventManager & events, doubl
 
 	for (Entity & ent : entities.withComponents<Renderable>()){
 		Renderable::Handle & render = ent.getComponent<Renderable>();
-		if (ent.hasComponent<Moveable>()){
-			render->setPosition(ent.getComponent<Moveable>()->getPosition());
+		if (ent.hasComponent<PhysComp>()){
+			render->setPosition(ent.getComponent<PhysComp>()->getPosition());
 		}
 		target.draw(*render->shape.get());	
 	}

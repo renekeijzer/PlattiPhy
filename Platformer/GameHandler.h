@@ -1,6 +1,7 @@
 
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <cstdlib>
 
 #include "TheGrid\EntityManager.hpp"
 

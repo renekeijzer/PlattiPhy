@@ -13,6 +13,7 @@ public:
 	void configure(EventManager & events) override;
 	void update(EntityManager & entities, EventManager & events, double dt);
 private:
+	void resolveCollisions(EntityManager & entities);
 	sf::RenderWindow & target;
 };
 

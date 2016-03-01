@@ -28,7 +28,18 @@ void GameHandler::run(){
 	init(target);
 	sf::Clock clock;
 	sf::Vector2f pos(32, 32);
-	factory->createHumanoid(pos);
+	factory->createHumanoid(pos, sf::Vector2f(32,32));
+
+	auto view = target.getViewport(target.getDefaultView());
+	for (int i = 0; i < 10; i++) {
+		factory->createParticle(sf::Vector2f(rand() %  view.width, rand() % view.height));
+	}
+
+	factory->createBlock(sf::Vector2f(100, 100), sf::Vector2f(32, 32), 80);
+	factory->createBlock(sf::Vector2f(200, 200), sf::Vector2f(16, 16), 40);
+	factory->createBlock(sf::Vector2f(400, 400), sf::Vector2f(64, 64), 160);
+	factory->createBlock(sf::Vector2f(1000, 500), sf::Vector2f(128, 128), 320);
+
 
 	while (target.isOpen()) {
 		sf::Event event;

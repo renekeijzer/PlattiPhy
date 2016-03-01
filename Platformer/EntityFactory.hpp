@@ -8,8 +8,11 @@
 class EntityFactory
 {
 public:
-	Entity createHumanoid(sf::Vector2f pos);
+	Entity createHumanoid(sf::Vector2f pos, sf::Vector2f size);
+	Entity createParticle(sf::Vector2f pos);
+	Entity createBlock(sf::Vector2f pos, sf::Vector2f size, float mass);
 	static EntityFactory* get(EntityManager & manager);
+
 private:
 	static EntityFactory * Instance;
 	EntityManager & manager;

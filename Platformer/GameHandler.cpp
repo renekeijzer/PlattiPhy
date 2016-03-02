@@ -38,7 +38,7 @@ void GameHandler::run(){
 	factory->createBlock(sf::Vector2f(100, 100), sf::Vector2f(32, 32), 80);
 	factory->createBlock(sf::Vector2f(200, 200), sf::Vector2f(16, 16), 40);
 	factory->createBlock(sf::Vector2f(400, 400), sf::Vector2f(64, 64), 160);
-	factory->createBlock(sf::Vector2f(1000, 500), sf::Vector2f(128, 128), 320);
+	factory->createBlock(sf::Vector2f(1000, 500), sf::Vector2f(128, 128), 0);
 
 
 	while (target.isOpen()) {

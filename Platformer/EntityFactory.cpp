@@ -18,8 +18,8 @@ Entity EntityFactory::createHumanoid(sf::Vector2f pos, sf::Vector2f size){
 	shape->setPosition(pos);
 	
 	ent.addComponent<PhysComp>(
-		sf::Vector2f(12, 12),
-		0.7,
+		sf::Vector2f(1, 1),
+		0.3,
 		size,
 		pos, 
 		80
@@ -55,6 +55,7 @@ Entity EntityFactory::createParticle(sf::Vector2f pos)
 
 	ent.addComponent<Renderable>(std::move(shape));
 	ent.addComponent<ParticleBehavior>();
+	return ent;
 }
 
 Entity EntityFactory::createBlock(sf::Vector2f pos, sf::Vector2f size, float mass)

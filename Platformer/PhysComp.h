@@ -1,11 +1,25 @@
 #include "TheGrid\Component.hpp"
 #include "Forces.h"
+#include "Manifold.h"
 #include <algorithm>
 
 struct AABB {
 	sf::Vector2f min;
 	sf::Vector2f max;
+
+public:
+	sf::Vector2f getCenter() {
+		auto returnVector = max - min;
+		returnVector.x /= 2;
+		returnVector.y /= 2;
+		returnVector += min;
+
+		return returnVector;
+	}
 };
+
+
+
 
 struct PhysComp : Component<PhysComp>{
 public:
@@ -106,18 +120,8 @@ public:
 		}
 
 
-		auto rhsMiddleVector = rhs->getAABB().max - rhs->getAABB().min;
-		rhsMiddleVector.x /= 2;
-		rhsMiddleVector.y /= 2;
-		rhsMiddleVector += rhs->getAABB().min;
-
-		auto lhsMiddleVector = lhs->getAABB().max - lhs->getAABB().min;
-		lhsMiddleVector.x /= 2;
-		lhsMiddleVector.y /= 2;
-		lhsMiddleVector += lhs->getAABB().min;		
-		
 		sf::Vector2f rv = rhs->velocity - lhs->velocity;
-		float velAlongNormal = dotProduct(rv, normalize(lhsMiddleVector, rhsMiddleVector));
+		float velAlongNormal = dotProduct(rv, normalize(lhs->getAABB().getCenter(), rhs->getAABB().getCenter()));
 		if (velAlongNormal > 0) {
 			return;
 		}
@@ -128,7 +132,7 @@ public:
 		j /= lhs->mass + 1 / rhs->mass;
 
 		
-		sf::Vector2f impulseVector = normalize(lhsMiddleVector, rhsMiddleVector) * j;
+		sf::Vector2f impulseVector = normalize(lhs->getAABB().getCenter(), rhs->getAABB().getCenter()) * j;
 
 		float massSum = lhs->mass + rhs->mass;
 		float ratio = lhs->mass / rhs->mass;
@@ -137,9 +141,70 @@ public:
 		ratio = rhs->mass / massSum;
 
 		rhs->velocity += ratio * impulseVector;
-		posistionalCorrection(rhs, lhs);
+
+		Manifold man(lhs, rhs);	
+		AABBvsAABB(man);
+		posistionalCorrection(man);
 
 
+	}
+	
+	static bool AABBvsAABB(Manifold & man) {
+		auto A = man.lhs;
+		auto B = man.rhs;
+			// Vector from A to B
+		sf::Vector2f n = B->getPosition() - A->getPosition();
+
+		AABB abox = A->getAABB();
+		AABB bbox = B->getAABB();
+
+			// Calculate half extents along x axis for each object
+		float a_extent = (abox.max.x - abox.min.x) / 2;
+		float b_extent = (bbox.max.x - bbox.min.x) / 2;
+
+			// Calculate overlap on x axis
+		float x_overlap = a_extent + b_extent - abs(n.x);
+		
+			// SAT test on x axis
+			if (x_overlap > 0)
+			{
+				// Calculate half extents along x axis for each object
+				float a_extent = (abox.max.y - abox.min.y) / 2;
+				float b_extent = (bbox.max.y - bbox.min.y) / 2;
+
+					// Calculate overlap on y axis
+				float y_overlap = a_extent + b_extent - abs(n.y);
+
+					// SAT test on y axis
+					if (y_overlap > 0)
+					{
+						// Find out which axis is axis of least penetration
+						if (x_overlap > y_overlap)
+						{
+							// Point towards B knowing that n points from A to B
+							if (n.x < 0) {
+								man.normal = sf::Vector2f(-1, 0);
+							}
+							else {
+								man.normal = sf::Vector2f(1, 0);
+								man.penetration = x_overlap;
+								return true;
+							}
+						}
+						else
+						{
+							// Point toward B knowing that n points from A to B
+							if (n.y < 0) {
+								man.normal = sf::Vector2f(0, -1);
+							}
+							else {
+								man.normal = sf::Vector2f(0, 1);
+								man.penetration = y_overlap;
+								return true;
+							}
+						}
+					}
+			}
 	}
 
 	static sf::Vector2f normalize(sf::Vector2f lhs, sf::Vector2f rhs) {
@@ -152,39 +217,23 @@ public:
 		return normal;
 	}
 
-	static void posistionalCorrection(ComponentHandle<PhysComp> & lhs, ComponentHandle<PhysComp> & rhs){
+	static void posistionalCorrection(Manifold & man){
 		const float percent = 0.2;
 		float slop = 0.1;
 
-		auto cr = getCollisionRectangle(lhs->getAABB(), rhs->getAABB());
-		std::cout << cr.min.x << " - " << cr.min.y << std::endl;
-		std::cout << cr.max.x << " - " << cr.max.y << std::endl;
-
-		auto rhsMiddleVector = rhs->getAABB().max - rhs->getAABB().min;
-		rhsMiddleVector.x /= 2;
-		rhsMiddleVector.y /= 2;
-		rhsMiddleVector += rhs->getAABB().min;
-
-		auto lhsMiddleVector = lhs->getAABB().max - lhs->getAABB().min;
-		lhsMiddleVector.x /= 2;
-		lhsMiddleVector.y /= 2;
-		lhsMiddleVector += lhs->getAABB().min;
-
-		sf::Vector2f penetrationdepth = cr.max - cr.min;
-		std::cout << penetrationdepth.x << " - " << penetrationdepth.y << std::endl << std::endl;
-		sf::Vector2f n = normalize(lhsMiddleVector, rhsMiddleVector);
+		sf::Vector2f n = man.normal;
 
 		sf::Vector2f correction(0,0);
-
-			correction.x = (std::max)(penetrationdepth.x - slop, 0.0f) / (lhs->mass + rhs->mass) * percent;
-			correction.x = correction.x * n.x;
-
-			correction.y = (std::max)(penetrationdepth.y - slop, 0.0f) / (lhs->mass + rhs->mass) * percent;
-			correction.y = correction.y * n.y;
-			std::cout << n.x << "-" << n.y << std::endl;
 		
-		lhs->setPosition(lhs->getPosition() - lhs->mass * correction);
-		rhs->setPosition(rhs->getPosition() + rhs->mass * correction);
+		correction.x = (std::max)(man.penetration - slop, 0.0f) / (man.lhs->mass + man.rhs->mass) * percent;
+		correction.x = correction.x * n.x;
+
+		correction.y = (std::max)(man.penetration - slop, 0.0f) / (man.lhs->mass + man.rhs->mass) * percent;
+		correction.y = correction.y * n.y;
+		std::cout << "correction : " << correction.x << " - " << correction.y << std::endl;
+
+		man.lhs->setPosition(man.lhs->getPosition() - man.lhs->mass * correction);
+		man.rhs->setPosition(man.rhs->getPosition() + man.rhs->mass * correction);
 
 	}
 
@@ -220,12 +269,14 @@ public:
 		return AABBCollisionCheck(collision, other);
 	}
 private:
-	float resitution;
+
 	sf::Vector2f velocity;
 	sf::Vector2f maxVelocity;
 	sf::Vector2f position;
 	sf::Vector2f size;
+
 	float mass;
+	float resitution;
 	float transitionSpeed;
 	AABB collision;
 

@@ -36,7 +36,6 @@ void MovementSystem::resolveCollisions(EntityManager & entities) {
 		auto pComp = lhs.getComponent<PhysComp>();
 		auto pos = pComp->getPosition();
 		pComp->setPosition(pos + pComp->getVelocity());
-
 	}
 
 }

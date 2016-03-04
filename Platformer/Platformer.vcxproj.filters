@@ -75,9 +75,6 @@
     <ClCompile Include="MovementSystem.cpp">
       <Filter>Source Files\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="Controlable.cpp">
-      <Filter>Source Files\Components</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Components.h">
@@ -87,9 +84,6 @@
       <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Colidable.h">
-      <Filter>Header Files\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Controlable.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="RenderSystem.h">
@@ -172,6 +166,27 @@
     </ClInclude>
     <ClInclude Include="PhysComp.h">
       <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Forces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MotoricComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleBehavior.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerBehavior.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockBehavior.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Manifold.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
